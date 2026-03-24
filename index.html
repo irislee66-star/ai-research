@@ -1,1 +1,478 @@
-<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c1{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c0{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c3{background-color:#ffffff;max-width:451.4pt;padding:72pt 72pt 72pt 72pt}.c2{height:11pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c3 doc-content"><p class="c0"><span class="c1">&lt;!DOCTYPE html&gt;</span></p><p class="c0"><span class="c1">&lt;html lang=&quot;zh-TW&quot;&gt;</span></p><p class="c0"><span class="c1">&lt;head&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;meta charset=&quot;UTF-8&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;title&gt;AI &#23416;&#34899;&#38936;&#33322;&#65372;&#33521;&#20523;&#32147;&#20856;&#32654;&#23416; - &#26446;&#32701;&#23032; Iris&lt;/title&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;script src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&amp;family=Noto+Serif+TC:wght@300;400;500;700&amp;family=Noto+Sans+TC:wght@300;400&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;style&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; :root {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --burberry-honey: #E1D3BE;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --burberry-red: #8B0D0B;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --burberry-black: #000000;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --burberry-white: #FFFFFF;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --burberry-grey: #6D6E71;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; /* &#37341;&#23565;&#34892;&#21205;&#31471;&#20778;&#21270;&#28414;&#21205;&#33287;&#39640;&#24230; */</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; html, body {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; height: 100%;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-text-size-adjust: 100%;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-font-smoothing: antialiased;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; body {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-family: &#39;Noto Sans TC&#39;, sans-serif;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-color: #F9F7F2;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: var(--burberry-black);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; overflow-x: hidden;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; line-height: 1.8;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; .serif {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-family: &#39;Bodoni Moda&#39;, &#39;Noto Serif TC&#39;, serif;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; /* Burberry &#32147;&#20856;&#26684;&#32011;&#32972;&#26223; - &#24375;&#21270;&#32218;&#26781;&#39023;&#33394;&#24230; */</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; .burberry-check {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-color: var(--burberry-honey);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-image: </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; linear-gradient(90deg, rgba(0,0,0,.12) 1px, transparent 1px),</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; linear-gradient(rgba(0,0,0,.12) 1px, transparent 1px),</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; linear-gradient(90deg, var(--burberry-white) 4px, transparent 4px),</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; linear-gradient(var(--burberry-white) 4px, transparent 4px),</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; linear-gradient(90deg, transparent 45px, var(--burberry-red) 42px, var(--burberry-red) 44px, transparent 44px),</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; linear-gradient(transparent 45px, var(--burberry-red) 42px, var(--burberry-red) 44px, transparent 44px);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-size: 55px 55px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; opacity: 0.22; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position: absolute;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; top: 0; left: 0; right: 0; bottom: 0;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; z-index: -1;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; .one-line {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; white-space: nowrap;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; display: inline-block;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; /* &#37341;&#23565;&#25163;&#27231;&#35222;&#37326;&#20778;&#21270; */</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; .hero-section {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; min-height: 100vh;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; min-height: 100dvh; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; .hero-title {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 2.6rem;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; line-height: 1.2;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; letter-spacing: 0.1em;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: var(--burberry-black);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; .section-title {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 1.4rem;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; letter-spacing: 0.15em;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; .content-text {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 1.0rem;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; .btn-burberry {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-color: var(--burberry-black);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: white;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transition: all 0.4s ease;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; letter-spacing: 0.2em;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border: 1px solid var(--burberry-black);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-tap-highlight-color: transparent;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; .btn-burberry:active {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: scale(0.98);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-color: #333;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; .burberry-border {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border: 1px solid rgba(0,0,0,0.1);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position: relative;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; .trench-detail {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position: relative;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding-bottom: 1.2rem;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; .trench-detail::after {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; content: &#39;&#39;;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position: absolute;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bottom: 0;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left: 50%;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: translateX(-50%);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; width: 40px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; height: 2px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-color: var(--burberry-red);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; @media (max-width: 768px) {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .hero-title { font-size: 1.75rem; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .section-title { font-size: 1.1rem; } </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .content-text { font-size: 0.9375rem; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .footer-slogan { font-size: 0.85rem !important; letter-spacing: 0.12em !important; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .px-mobile { padding-left: 1.5rem; padding-right: 1.5rem; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; @media (max-width: 375px) {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .section-title { font-size: 1.05rem; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .hero-title { font-size: 1.6rem; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;/style&gt;</span></p><p class="c0"><span class="c1">&lt;/head&gt;</span></p><p class="c0"><span class="c1">&lt;body&gt;</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;!-- &#38914;&#37096; Burberry &#32147;&#20856;&#39166;&#26781; --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;div class=&quot;w-full flex h-1.5 fixed top-0 z-50&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;flex-grow bg-[#E1D3BE]&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;w-3 bg-white&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;w-1 bg-black&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;w-3 bg-white&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;w-1 bg-[#8B0D0B]&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;w-3 bg-white&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;w-1 bg-black&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;w-3 bg-white&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;!-- &#20027;&#35222;&#35258;&#21312; (Hero) --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;section class=&quot;relative hero-section flex flex-col justify-center items-center px-6 py-20 text-center overflow-hidden&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;burberry-check&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;max-w-4xl z-10&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;serif italic text-sm md:text-lg mb-6 tracking-[0.4em] text-gray-400 one-line uppercase&quot;&gt;Heritage &middot; Innovation &middot; AI&lt;/p&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h1 class=&quot;serif hero-title font-bold mb-10 trench-detail one-line text-black&quot;&gt;&#26234;&#30740;&#35222;&#37326; &middot; AI &#38936;&#33322;&lt;/h1&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;content-text max-w-xl mx-auto text-gray-600 font-light leading-loose serif px-mobile&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#22238;&#27512;&#20154;&#30340;&#26412;&#36074;&#65292;&#29992;&#31185;&#25216;&#39493;&#21205;&#38728;&#24863;&#12290;&lt;br class=&quot;hidden md:block&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#36889;&#26159;&#19968;&#22580;&#36328;&#36234;&#38936;&#22495;&#30340;&#23416;&#34899;&#20849;&#25391;&#65292;&#35731;&#25105;&#20497;&#37325;&#26032;&#23450;&#32681;&#20154;&#27231;&#21332;&#20316;&#30340;&#28145;&#24230;&#12290;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;mt-12&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a href=&quot;#message&quot; class=&quot;btn-burberry px-10 py-4 rounded-none inline-block font-bold text-base one-line shadow-sm&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#20102;&#35299;&#26356;&#22810;&#35443;&#24773; &lt;i class=&quot;fa-solid fa-arrow-right-long ml-3&quot;&gt;&lt;/i&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/a&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;/section&gt;</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;!-- &#35338;&#24687;&#20839;&#23481;&#21312; --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;section id=&quot;message&quot; class=&quot;py-20 px-4 md:px-6&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;max-w-2xl mx-auto&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;burberry-border p-7 md:p-14 relative bg-white shadow-sm&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- &#35282;&#33853;&#35037;&#39166; --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;absolute top-0 right-6 md:right-10 w-5 md:w-6 h-8 md:h-10 bg-[#E1D3BE] border-b-2 border-[#8B0D0B]&quot;&gt;&lt;/div&gt;</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2 class=&quot;serif section-title font-bold mb-10 text-center text-black one-line&quot;&gt;&#21508;&#20301;&#22821;&#20276;&#24179;&#23433;&#65306;&lt;/h2&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;content-text space-y-6 text-gray-800 text-left px-2&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;&#36889;&#20221;&#21839;&#21367;&#26088;&#22312;&#20102;&#35299;&#22823;&#23478;&#22312;&#38754;&#23565;&#23416;&#34899;&#30740;&#31350;&#12289;&#35079;&#38620;&#36039;&#35338;&#34389;&#29702;&#12289;&#20197;&#21450; AI &#24037;&#20855;&#25033;&#29992;&#26178;&#29694;&#29376;&#33287;&#25361;&#25136;&#12290;&lt;/p&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;bg-[#F9F7F2] p-6 md:p-7 border-l-2 border-black&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;font-bold text-[#8B0D0B] mb-2 text-sm md:text-base one-line uppercase tracking-widest text-center md:text-left&quot;&gt;&#34892;&#21205;&#24314;&#35696; &middot; Action Suggestion&lt;/p&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;serif italic text-gray-700 leading-relaxed&quot;&gt;&#24314;&#35696;&#30001;&#21508;&#20301;&#22821;&#20276;&#65292;&#23601;&#25152;&#30740;&#31350;&#30340;&#26041;&#21521;&#65292;&#26283;&#26178;&#24615;&#23563;&#25214;&#19968;&#20491;&#20027;&#38988;&#65292;&#20006;&#29872;&#32350;&#20027;&#38988;&#35373;&#23450;&#19968;&#31995;&#21015;&#25552;&#35696;&#65292;&#30001; AI &#22238;&#35206;&#12290;&lt;/p&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;font-medium pt-4 text-black serif&quot;&gt;&#33509;&#26178;&#38291;&#20801;&#35377;&#65292;&#35531;&#20107;&#20808;&#20570;&#22909;&#28310;&#20633;&#12290;&lt;br&gt;&#30070;&#25105;&#20497;&#35211;&#38754;&#26178;&#65292;&#21487;&#20197;&#25552;&#20986;&#24744;&#23565; AI &#30340;&#24515;&#24471;&#65306;&lt;/p&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class=&quot;space-y-4 pl-1&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;flex items-start&quot;&gt;&lt;span class=&quot;w-1.5 h-1.5 bg-[#8B0D0B] mt-2.5 mr-4 flex-shrink-0&quot;&gt;&lt;/span&gt; &lt;span class=&quot;one-line&quot;&gt;&#23565;&#33258;&#24049;&#30740;&#31350;&#26041;&#21521;&#26377;&#20309;&#24171;&#21161;&#65311;&lt;/span&gt;&lt;/li&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;flex items-start&quot;&gt;&lt;span class=&quot;w-1.5 h-1.5 bg-black mt-2.5 mr-4 flex-shrink-0&quot;&gt;&lt;/span&gt; &lt;span class=&quot;one-line&quot;&gt;&#26410;&#20358;&#22914;&#20309;&#24478;&#20013;&#30906;&#23450;&#30740;&#31350;&#20027;&#38988;&#65311;&lt;/span&gt;&lt;/li&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li class=&quot;flex items-start&quot;&gt;&lt;span class=&quot;w-1.5 h-1.5 bg-black mt-2.5 mr-4 flex-shrink-0&quot;&gt;&lt;/span&gt; &lt;span class=&quot;one-line&quot;&gt;&#20309;&#26178;&#35201;&#30906;&#23450;&#20027;&#38988;&#65311;&lt;/span&gt;&lt;/li&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;serif italic text-[#8B0D0B] text-center pt-10 font-bold text-lg leading-relaxed&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#26410;&#20358;&#30070;&#25105;&#20497;&#20849;&#21516;&#25506;&#32034;&#26178;&#65292;&lt;br&gt;&#23559;&#20855;&#26377;&#25351;&#27161;&#24615;&#20729;&#20540;&#21908;&#12290;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;/section&gt;</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;!-- &#21839;&#21367;&#36992;&#35531;&#21312; --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;section class=&quot;py-20 px-4 md:px-6 text-center bg-[#F2F0EB]&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;max-w-3xl mx-auto&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2 class=&quot;serif section-title font-bold mb-10 one-line&quot;&gt;&#19981;&#35542;&#24744;&#26159;&#30740;&#31350;&#29983;&#65292;&#25110;&#26159;&#36328;&#30028;&#22821;&#20276;&lt;/h2&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;bg-white p-7 md:p-12 rounded-none mb-12 text-left shadow-sm border border-gray-200&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;content-text mb-6&quot;&gt;&#24744;&#30340;&#21443;&#33287;&#23565;&#36889;&#22580;&#35611;&#24231;&#30340;&#20778;&#21270;&#33267;&#38364;&#37325;&#35201;&#12290;&#22312;&#22635;&#23531;&#38988;&#30446;&#26178;&#65292;&#35531;&#20381;&#29031;&#24744;&#30446;&#21069;&#30340;&lt;strong&gt;&#12300;&#23526;&#38555;&#23416;&#32722;&#29376;&#24907;&#12301;&lt;/strong&gt;&#25110;&lt;strong&gt;&#12300;&#23560;&#26989;&#24037;&#20316;&#24515;&#22659;&#12301;&lt;/strong&gt;&#36984;&#25799;&#21363;&#21487;&#12290;&lt;/p&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;w-10 h-0.5 bg-[#8B0D0B] mb-6&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;content-text text-gray-500 font-light italic serif&quot;&gt;&#22312;&#23416;&#34899;&#33287;&#25104;&#38263;&#30340;&#36335;&#19978;&#65292;&#25105;&#20497;&#37117;&#26159;&#22821;&#20276;&#12290;&#35731;&#25105;&#20497;&#19968;&#36215;&#29992;&#31185;&#25216;&#36681;&#21270;&#22739;&#21147;&#65292;&#25214;&#22238;&#25506;&#32034;&#30693;&#35672;&#30340;&#24841;&#24709;&#12290;&lt;/p&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- &#36899;&#32080;&#26356;&#26032; --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a href=&quot;https://forms.gle/QbdK4po3QDwANn2w5&quot; target=&quot;_blank&quot; class=&quot;btn-burberry px-12 md:px-14 py-4 rounded-none inline-block font-bold text-lg tracking-[0.2em] shadow-md w-full md:w-auto&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#22635;&#23531;&#30740;&#31350;&#21839;&#21367;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/a&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;mt-8 text-[10px] text-gray-400 italic one-line uppercase tracking-[0.2em]&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#36039;&#26009;&#21311;&#21517;&#20445;&#23494; &middot; &#20677;&#20379;&#23416;&#34899;&#35506;&#31243;&#20778;&#21270;&#20351;&#29992;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;/section&gt;</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;!-- &#38913;&#33139; (Footer) --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;footer class=&quot;py-16 px-6 bg-black text-white relative overflow-hidden text-center md:text-left&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;absolute left-[-20px] top-[-20px] opacity-[0.03] serif italic text-[120px] pointer-events-none&quot;&gt;Heritage&lt;/div&gt;</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;max-w-5xl mx-auto relative z-10 flex flex-col items-center&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;mb-10 text-center&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3 class=&quot;serif text-xl md:text-3xl font-bold tracking-[0.25em] mb-4 one-line text-[#E1D3BE]&quot;&gt;R.C. AI&#32654;&#23416;&#23526;&#39511;&#23460;&lt;/h3&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;flex items-center justify-center space-x-2 md:space-x-3&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;h-[0.5px] w-4 md:w-6 bg-[#8B0D0B]&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;text-white text-sm md:text-lg font-light tracking-[0.2em] md:tracking-[0.3em] one-line footer-slogan&quot;&gt;&#31185;&#25216;&#28858;&#31558; &#32654;&#23416;&#28858;&#22696; &#30332;&#29694;&#32887;&#20154;&#24515;&#39640;&#24230;&lt;/p&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;h-[0.5px] w-4 md:w-6 bg-[#8B0D0B]&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;w-full pt-10 border-t border-white border-opacity-5 text-gray-500 tracking-[0.2em] text-[9px] md:text-[10px] uppercase flex flex-col md:flex-row justify-between items-center text-center&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;one-line mb-1 md:mb-0&quot;&gt;Iris Lee &middot; Academia &amp; Fashion Management&lt;/p&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;opacity-30 one-line uppercase&quot;&gt;&copy; 2024 LONDON &middot; TAIPEI &middot; ALL RIGHTS RESERVED&lt;/p&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;/footer&gt;</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;script&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; document.querySelectorAll(&#39;a[href^=&quot;#&quot;]&#39;).forEach(anchor =&gt; {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; anchor.addEventListener(&#39;click&#39;, function (e) {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; e.preventDefault();</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.querySelector(this.getAttribute(&#39;href&#39;)).scrollIntoView({</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; behavior: &#39;smooth&#39;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; });</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;/script&gt;</span></p><p class="c0 c2"><span class="c1"></span></p><p class="c0"><span class="c1">&lt;/body&gt;</span></p><p class="c0"><span class="c1">&lt;/html&gt;</span></p><p class="c0 c2"><span class="c1"></span></p></body></html>
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>AI學術領航｜英倫經典美學 - 李羽姸 Iris</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Noto+Serif+TC:wght@300;400;500;700&Fm+TC:wght@300;400;500;700&FpplayNotw; rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        ：root {
+
+            --burberry-honey: #E1D3BE;
+
+            --burberry-red: #8B0D0B;
+
+            --burberry-black: #000000;
+
+            --burberry-white: #FFFFFF;
+
+            --burberry-grey: #6D6E71;
+
+        }
+
+
+        /* 瞄準行動端優化滾動與高度 */
+
+        html，body {
+
+            高度：100%；
+
+            -webkit-text-size-adjust: 100%;
+
+            -webkit-font-smoothing: antialiased;
+
+        }
+
+
+        身體 {
+
+            font-family: 'Noto Sans TC', sans-serif;
+
+            背景顏色：#F9F7F2；
+
+            顏色：var(--burberry-black);
+
+            overflow-x: 隱藏;
+
+            行高：1.8；
+
+        }
+
+
+        .serif {
+
+            字體系列：'Bodoni Moda'、'Noto Serif TC'、serif；
+
+        }
+
+
+        /* Burberry經典格紋背景-強化線顯色度 */
+
+        .burberry-check {
+
+            background-color: var(--burberry-honey);
+
+            背景圖片：
+
+                linear-gradient(90deg, rgba(0,0,0,.12) 1px, transparent 1px),
+
+                linear-gradient(rgba(0,0,0,.12) 1px, transparent 1px),
+
+                linear-gradient(90deg, var(--burberry-white) 4px, transparent 4px),
+
+                linear-gradient(var(--burberry-white) 4px, transparent 4px),
+
+                linear-gradient(90deg, transparent 45px, var(--burberry-red) 42px, var(--burberry-red) 44px, transparent 44px),
+
+                linear-gradient(transparent 45px, var(--burberry-red) 42px, var(--burberry-red) 44px, transparent 44px);
+
+            background-size: 55px 55px;
+
+            不透明度：0.22；
+
+            位置：絕對定位；
+
+            上：0；左：0；右：0；下：0；
+
+            z-index: -1;
+
+        }
+
+
+        .one-line {
+
+            空格：不換行；
+
+            顯示：行內塊；
+
+        }
+
+
+        /* 瞄準手機優化視野 */
+
+        .hero-section {
+
+            最小高度：100vh；
+
+            最小高度：100dvh；
+
+        }
+
+
+        .hero-title {
+
+            字體大小：2.6rem；
+
+            行高：1.2；
+
+            字母間距：0.1em；
+
+            顏色：var(--burberry-black);
+
+        }
+
+       
+
+        .section-title {
+
+            字體大小：1.4rem；
+
+            字母間距：0.15em；
+
+        }
+
+
+        .content-text {
+
+            字體大小：1.0rem；
+
+        }
+
+
+        .btn-burberry {
+
+            background-color: var(--burberry-black);
+
+            顏色：白色；
+
+            過渡：全部緩動 0.4 秒；
+
+            字母間距：0.2em；
+
+            border: 1px solid var(--burberry-black);
+
+            -webkit-tap-highlight-color: 透明;
+
+        }
+
+
+        .btn-burberry:active {
+
+            變換：縮放(0.98)；
+
+            背景顏色：#333；
+
+        }
+
+
+        .burberry-border {
+
+            border: 1px solid rgba(0,0,0,0.1);
+
+            位置：相對；
+
+        }
+
+
+        .trench-detail {
+
+            位置：相對；
+
+            padding-bottom: 1.2rem;
+
+        }
+
+        .trench-detail::after {
+
+            內容： '';
+
+            位置：絕對定位；
+
+            底部：0；
+
+            左側：50%；
+
+            變換：translateX(-50%)；
+
+            寬度：40像素；
+
+            高度：2像素；
+
+            background-color: var(--burberry-red);
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .hero-title { font-size: 1.75rem; }
+
+            .section-title { font-size: 1.1rem; }
+
+            .content-text { font-size: 0.9375rem; }
+
+            .footer-slogan { font-size: 0.85rem !important; letter-spacing: 0.12em !important; }
+
+            .px-mobile { padding-left: 1.5rem; padding-right: 1.5rem; }
+
+        }
+
+
+        @media (max-width: 375px) {
+
+            .section-title { font-size: 1.05rem; }
+
+            .hero-title { font-size: 1.6rem; }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- 頂部 Burberry 經典飾條 -->
+
+    <div class="w-full flex h-1.5 fixed top-0 z-50">
+
+        <div class="flex-grow bg-[#E1D3BE]"></div>
+
+        <div class="w-3 bg-white"></div>
+
+        <div class="w-1 bg-black"></div>
+
+        <div class="w-3 bg-white"></div>
+
+        <div class="w-1 bg-[#8B0D0B]"></div>
+
+        <div class="w-3 bg-white"></div>
+
+        <div class="w-1 bg-black"></div>
+
+        <div class="w-3 bg-white"></div>
+
+    </div>
+
+
+    <!-- 主區（英雄）-->
+
+    <section class="relative hero-section flex flex-col justify-center items-center px-6 py-20 text-center overflow-hidden">
+
+        <div class="burberry-check"></div>
+
+       
+
+        <div class="max-w-4xl z-10">
+
+            <p class="serif italic text-sm md:text-lg mb-6 tracking-[0.4em] text-gray-400 one-line uppercase">傳承 · 創新 · 人工智慧</p>
+
+            <h1 class="serif Hero-title font-bold mb-10 trunk-detail one-line text-black">智研視野·AI領航</h1>
+
+            <p class="content-text max-w-xl mx-auto text-gray-600 font-light leading-loose serif px-mobile">
+
+                回歸人的本質，以科技驅動靈感。 <br class="hidden md:block">
+
+                這是一個領域的學術中心，讓我們重新定義人機協作的深度。
+
+            </p>
+
+           
+
+            <div class="mt-12">
+
+                <a href="#message" class="btn-burberry px-10 py-4 rounded-none inline-block font-bold text-base one-line shadow-sm">
+
+                    了解更多詳情 <i class="fa-solid fa-arrow-right-long ml-3"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 訊息內容區 -->
+
+    <section id="message" class="py-20 px-4 md:px-6">
+
+        <div class="max-w-2xl mx-auto">
+
+            <div class="burberry-border p-7 md:p-14 relative bg-white shadow-sm">
+
+                <!-- 紫色裝飾 -->
+
+                <div class="absolute top-0 right-6 md:right-10 w-5 md:w-6 h-8 md:h-10 bg-[#E1D3BE] border-b-2 border-[#8B0D0B]"></div>
+
+
+                <h2 class="serif section-title font-bold mb-10 text-center text-black one-line">各位夥伴平安：</h2>
+
+               
+
+                <div class="content-text space-y-6 text-gray-800 text-left px-2">
+
+                    <p>這份草案旨在了解大家在學術研究、複雜資訊處理、以及人工智慧工具應用時的現況與挑戰。 </p>
+
+                   
+
+                    <div class="bg-[#F9F7F2] p-6 md:p-7 border-l-2 border-black">
+
+                        <p class="font-bold text-[#8B0D0B] mb-2 text-sm md:text-base one-line uppercase tracking-widest text-center md:text-left">行動建議</p>
+
+                        <p class="serif italic text-gray-700leading-relaxed">由夥伴提出的建議，就所研究的方向，臨時性尋找一個主題，並圍繞主題設定一系列建議，由AI回复。 </p>
+
+                    </div>
+
+
+                    <p class="font-medium pt-4 text-black serif">若時間允許，請事先做好準備。 <br>當我們見面時，可以提出您對AI的心得：</p>
+
+                   
+
+                    <ul class="space-y-4 pl-1">
+
+                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-[#8B0D0B] mt-2.5 mr-4 flex-shrink-0"></span> <span class="one-line">對自己研究方向有何幫助？ </span></li>
+
+                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-black mt-2.5 mr-4 flex-shrink-0"></span> <span class="one-line">未來如何決定研究主題？ </span></li>
+
+                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-black mt-2.5 mr-4 flex-shrink-0"></span> <span class="one-line">何時要確定主題？ </span></li>
+
+                    </ul>
+
+
+                    <p class="serif italic text-[#8B0D0B] text-center pt-10 font-bold text-lg leading-relaxed">
+
+                        未來當我們共同探索時，<br>將具有指標性喔價值。
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 邀請區 -->
+
+    <section class="py-20 px-4 md:px-6 text-center bg-[#F2F0EB]">
+
+        <div class="max-w-3xl mx-auto">
+
+            <h2 class="serif section-title font-bold mb-10 one-line">你是研究生，還是跨界夥伴</h2>
+
+           
+
+            <div class="bg-white p-7 md:p-12 rounded-none mb-12 text-left shadow-sm border border-gray-200">
+
+                <p class="content-text mb-6">您參與的通報防疫的最佳化至關重要。在填寫問題時，請按照您目前的<strong>「實際學習狀態」</strong>或<strong>「專業工作心境」</strong>選擇即可。 </p>
+
+                <div class="w-10 h-0.5 bg-[#8B0D0B] mb-6"></div>
+
+                <p class="content-text text-gray-500 font-light italic serif">在學術與成長的路上，我們都是夥伴。讓我們一起用科技轉換壓力，尋找回探索知識的樂趣。 </p>
+
+            </div>
+
+
+            <!-- 連結更新 -->
+
+            <a href="https://forms.gle/QbdK4po3QDwANn2w5" target="_blank" class="btn-burberry px-12 md:px-14 py-4 rounded-none inline-block font-bold text-lg tracking-[0.2em] font-bold text-lg tracking-[0.2em] font-bold text-lg tracking-[0.2em] font-bold text-lg。
+
+                填寫研究表格
+
+            </a>
+
+           
+
+            <p class="mt-8 text-[10px] text-gray-400 italic one-line uppercase tracking-[0.2em]">
+
+                資料隱私保密·大眾學術課程優化使用
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 頁尾（頁尾）-->
+
+    <footer class="py-16 px-6 bg-black text-white relative overflow-hidden text-center md:text-left">
+
+        <div class="absolute left-[-20px] top-[-20px] opacity-[0.03] serif italic text-[120px] pointer-events-none">Heritage</div>
+
+
+        <div class="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
+
+            <div class="mb-10 text-center">
+
+                <h3 class="serif text-xl md:text-3xl font-bold Tracking-[0.25em] mb-4 單行文字-[#E1D3BE]">RC AI 美學實驗室</h3>
+
+                <div class="flex items-center justify-center space-x-2 md:space-x-3">
+
+                    <div class="h-[0.5px] w-4 md:w-6 bg-[#8B0D0B]"></div>
+
+                    <p class="text-white text-sm md:text-lg font-light track-[0.2em] md:tracking-[0.3em] one-line footer-slogan">科技為筆 美學為墨 發現職人心高度</p>
+
+                    <div class="h-[0.5px] w-4 md:w-6 bg-[#8B0D0B]"></div>
+
+                </div>
+
+            </div>
+
+           
+
+            <div class="w-full pt-10 border-t border-white border-opacity-5 text-gray-500 tracking-[0.2em] text-[9px] md:text-[10px] uppercase flex flex-col md:flex-rowify-md:flex-cent-center-center-ttm-center-ttm-center-ttm-center？
+
+                <p class="one-line mb-1 md:mb-0">Iris Lee · 學術界與時尚管理</p>
+
+                <p class="opacity-30 one-line uppercase">© 2024 倫敦 · 台北 · 保留所有權利</p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+            anchor.addEventListener('click', function (e) {
+
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+
+                    行為：'平滑'
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
+
