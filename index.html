@@ -1,478 +1,253 @@
 <!DOCTYPE html>
-
 <html lang="zh-TW">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <title>AI學術領航｜英倫經典美學 - 李羽姸 Iris</title>
-
+    <title>AI 學術領航｜英倫經典美學 - 李羽姸 Iris</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Noto+Serif+TC:wght@300;400;500;700&Fm+TC:wght@300;400;500;700&FpplayNotw; rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <style>
-
-        ：root {
-
+        :root {
             --burberry-honey: #E1D3BE;
-
             --burberry-red: #8B0D0B;
-
             --burberry-black: #000000;
-
             --burberry-white: #FFFFFF;
-
             --burberry-grey: #6D6E71;
-
         }
 
-
-        /* 瞄準行動端優化滾動與高度 */
-
-        html，body {
-
-            高度：100%；
-
+        /* 針對行動端優化滾動與高度 */
+        html, body {
+            height: 100%;
             -webkit-text-size-adjust: 100%;
-
             -webkit-font-smoothing: antialiased;
-
         }
 
-
-        身體 {
-
+        body {
             font-family: 'Noto Sans TC', sans-serif;
-
-            背景顏色：#F9F7F2；
-
-            顏色：var(--burberry-black);
-
-            overflow-x: 隱藏;
-
-            行高：1.8；
-
+            background-color: #F9F7F2;
+            color: var(--burberry-black);
+            overflow-x: hidden;
+            line-height: 1.8;
         }
-
 
         .serif {
-
-            字體系列：'Bodoni Moda'、'Noto Serif TC'、serif；
-
+            font-family: 'Bodoni Moda', 'Noto Serif TC', serif;
         }
 
-
-        /* Burberry經典格紋背景-強化線顯色度 */
-
+        /* Burberry 經典格紋背景 - 強化線條顯色度 */
         .burberry-check {
-
             background-color: var(--burberry-honey);
-
-            背景圖片：
-
+            background-image: 
                 linear-gradient(90deg, rgba(0,0,0,.12) 1px, transparent 1px),
-
                 linear-gradient(rgba(0,0,0,.12) 1px, transparent 1px),
-
                 linear-gradient(90deg, var(--burberry-white) 4px, transparent 4px),
-
                 linear-gradient(var(--burberry-white) 4px, transparent 4px),
-
                 linear-gradient(90deg, transparent 45px, var(--burberry-red) 42px, var(--burberry-red) 44px, transparent 44px),
-
                 linear-gradient(transparent 45px, var(--burberry-red) 42px, var(--burberry-red) 44px, transparent 44px);
-
             background-size: 55px 55px;
-
-            不透明度：0.22；
-
-            位置：絕對定位；
-
-            上：0；左：0；右：0；下：0；
-
+            opacity: 0.22; 
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
             z-index: -1;
-
         }
-
 
         .one-line {
-
-            空格：不換行；
-
-            顯示：行內塊；
-
+            white-space: nowrap;
+            display: inline-block;
         }
 
-
-        /* 瞄準手機優化視野 */
-
+        /* 針對手機視野優化 */
         .hero-section {
-
-            最小高度：100vh；
-
-            最小高度：100dvh；
-
+            min-height: 100vh;
+            min-height: 100dvh; 
         }
-
 
         .hero-title {
-
-            字體大小：2.6rem；
-
-            行高：1.2；
-
-            字母間距：0.1em；
-
-            顏色：var(--burberry-black);
-
+            font-size: 2.6rem;
+            line-height: 1.2;
+            letter-spacing: 0.1em;
+            color: var(--burberry-black);
         }
-
-       
-
+        
         .section-title {
-
-            字體大小：1.4rem；
-
-            字母間距：0.15em；
-
+            font-size: 1.4rem;
+            letter-spacing: 0.15em;
         }
-
 
         .content-text {
-
-            字體大小：1.0rem；
-
+            font-size: 1.0rem;
         }
-
 
         .btn-burberry {
-
             background-color: var(--burberry-black);
-
-            顏色：白色；
-
-            過渡：全部緩動 0.4 秒；
-
-            字母間距：0.2em；
-
+            color: white;
+            transition: all 0.4s ease;
+            letter-spacing: 0.2em;
             border: 1px solid var(--burberry-black);
-
-            -webkit-tap-highlight-color: 透明;
-
+            -webkit-tap-highlight-color: transparent;
         }
-
 
         .btn-burberry:active {
-
-            變換：縮放(0.98)；
-
-            背景顏色：#333；
-
+            transform: scale(0.98);
+            background-color: #333;
         }
-
 
         .burberry-border {
-
             border: 1px solid rgba(0,0,0,0.1);
-
-            位置：相對；
-
+            position: relative;
         }
-
 
         .trench-detail {
-
-            位置：相對；
-
+            position: relative;
             padding-bottom: 1.2rem;
-
         }
-
         .trench-detail::after {
-
-            內容： '';
-
-            位置：絕對定位；
-
-            底部：0；
-
-            左側：50%；
-
-            變換：translateX(-50%)；
-
-            寬度：40像素；
-
-            高度：2像素；
-
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
             background-color: var(--burberry-red);
-
         }
-
 
         @media (max-width: 768px) {
-
             .hero-title { font-size: 1.75rem; }
-
-            .section-title { font-size: 1.1rem; }
-
+            .section-title { font-size: 1.1rem; } 
             .content-text { font-size: 0.9375rem; }
-
             .footer-slogan { font-size: 0.85rem !important; letter-spacing: 0.12em !important; }
-
             .px-mobile { padding-left: 1.5rem; padding-right: 1.5rem; }
-
         }
-
 
         @media (max-width: 375px) {
-
             .section-title { font-size: 1.05rem; }
-
             .hero-title { font-size: 1.6rem; }
-
         }
-
     </style>
-
 </head>
-
 <body>
 
-
     <!-- 頂部 Burberry 經典飾條 -->
-
     <div class="w-full flex h-1.5 fixed top-0 z-50">
-
         <div class="flex-grow bg-[#E1D3BE]"></div>
-
         <div class="w-3 bg-white"></div>
-
         <div class="w-1 bg-black"></div>
-
         <div class="w-3 bg-white"></div>
-
         <div class="w-1 bg-[#8B0D0B]"></div>
-
         <div class="w-3 bg-white"></div>
-
         <div class="w-1 bg-black"></div>
-
         <div class="w-3 bg-white"></div>
-
     </div>
 
-
-    <!-- 主區（英雄）-->
-
+    <!-- 主視覺區 (Hero) -->
     <section class="relative hero-section flex flex-col justify-center items-center px-6 py-20 text-center overflow-hidden">
-
         <div class="burberry-check"></div>
-
-       
-
+        
         <div class="max-w-4xl z-10">
-
-            <p class="serif italic text-sm md:text-lg mb-6 tracking-[0.4em] text-gray-400 one-line uppercase">傳承 · 創新 · 人工智慧</p>
-
-            <h1 class="serif Hero-title font-bold mb-10 trunk-detail one-line text-black">智研視野·AI領航</h1>
-
+            <p class="serif italic text-sm md:text-lg mb-6 tracking-[0.4em] text-gray-400 one-line uppercase">Heritage · Innovation · AI</p>
+            <h1 class="serif hero-title font-bold mb-10 trench-detail one-line text-black">智研視野 · AI 領航</h1>
             <p class="content-text max-w-xl mx-auto text-gray-600 font-light leading-loose serif px-mobile">
-
-                回歸人的本質，以科技驅動靈感。 <br class="hidden md:block">
-
-                這是一個領域的學術中心，讓我們重新定義人機協作的深度。
-
+                回歸人的本質，用科技驅動靈感。<br class="hidden md:block">
+                這是一場跨越領域的學術共振，讓我們重新定義人機協作的深度。
             </p>
-
-           
-
+            
             <div class="mt-12">
-
                 <a href="#message" class="btn-burberry px-10 py-4 rounded-none inline-block font-bold text-base one-line shadow-sm">
-
                     了解更多詳情 <i class="fa-solid fa-arrow-right-long ml-3"></i>
-
                 </a>
-
             </div>
-
         </div>
-
     </section>
-
 
     <!-- 訊息內容區 -->
-
     <section id="message" class="py-20 px-4 md:px-6">
-
         <div class="max-w-2xl mx-auto">
-
             <div class="burberry-border p-7 md:p-14 relative bg-white shadow-sm">
-
-                <!-- 紫色裝飾 -->
-
+                <!-- 角落裝飾 -->
                 <div class="absolute top-0 right-6 md:right-10 w-5 md:w-6 h-8 md:h-10 bg-[#E1D3BE] border-b-2 border-[#8B0D0B]"></div>
 
-
                 <h2 class="serif section-title font-bold mb-10 text-center text-black one-line">各位夥伴平安：</h2>
-
-               
-
+                
                 <div class="content-text space-y-6 text-gray-800 text-left px-2">
-
-                    <p>這份草案旨在了解大家在學術研究、複雜資訊處理、以及人工智慧工具應用時的現況與挑戰。 </p>
-
-                   
-
+                    <p>這份問卷旨在了解大家在面對學術研究、複雜資訊處理、以及 AI 工具應用時現狀與挑戰。</p>
+                    
                     <div class="bg-[#F9F7F2] p-6 md:p-7 border-l-2 border-black">
-
-                        <p class="font-bold text-[#8B0D0B] mb-2 text-sm md:text-base one-line uppercase tracking-widest text-center md:text-left">行動建議</p>
-
-                        <p class="serif italic text-gray-700leading-relaxed">由夥伴提出的建議，就所研究的方向，臨時性尋找一個主題，並圍繞主題設定一系列建議，由AI回复。 </p>
-
+                        <p class="font-bold text-[#8B0D0B] mb-2 text-sm md:text-base one-line uppercase tracking-widest text-center md:text-left">行動建議 · Action Suggestion</p>
+                        <p class="serif italic text-gray-700 leading-relaxed">建議由各位夥伴，就所研究的方向，暫時性尋找一個主題，並環繞主題設定一系列提議，由 AI 回覆。</p>
                     </div>
 
-
-                    <p class="font-medium pt-4 text-black serif">若時間允許，請事先做好準備。 <br>當我們見面時，可以提出您對AI的心得：</p>
-
-                   
-
+                    <p class="font-medium pt-4 text-black serif">若時間允許，請事先做好準備。<br>當我們見面時，可以提出您對 AI 的心得：</p>
+                    
                     <ul class="space-y-4 pl-1">
-
-                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-[#8B0D0B] mt-2.5 mr-4 flex-shrink-0"></span> <span class="one-line">對自己研究方向有何幫助？ </span></li>
-
-                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-black mt-2.5 mr-4 flex-shrink-0"></span> <span class="one-line">未來如何決定研究主題？ </span></li>
-
-                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-black mt-2.5 mr-4 flex-shrink-0"></span> <span class="one-line">何時要確定主題？ </span></li>
-
+                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-[#8B0D0B] mt-2.5 mr-4 flex-shrink-0"></span> <span class="one-line">對自己研究方向有何幫助？</span></li>
+                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-black mt-2.5 mr-4 flex-shrink-0"></span> <span class="one-line">未來如何從中確定研究主題？</span></li>
+                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-black mt-2.5 mr-4 flex-shrink-0"></span> <span class="one-line">何時要確定主題？</span></li>
                     </ul>
 
-
                     <p class="serif italic text-[#8B0D0B] text-center pt-10 font-bold text-lg leading-relaxed">
-
-                        未來當我們共同探索時，<br>將具有指標性喔價值。
-
+                        未來當我們共同探索時，<br>將具有指標性價值喔。
                     </p>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
-
-    <!-- 邀請區 -->
-
+    <!-- 問卷邀請區 -->
     <section class="py-20 px-4 md:px-6 text-center bg-[#F2F0EB]">
-
         <div class="max-w-3xl mx-auto">
-
-            <h2 class="serif section-title font-bold mb-10 one-line">你是研究生，還是跨界夥伴</h2>
-
-           
-
+            <h2 class="serif section-title font-bold mb-10 one-line">不論您是研究生，或是跨界夥伴</h2>
+            
             <div class="bg-white p-7 md:p-12 rounded-none mb-12 text-left shadow-sm border border-gray-200">
-
-                <p class="content-text mb-6">您參與的通報防疫的最佳化至關重要。在填寫問題時，請按照您目前的<strong>「實際學習狀態」</strong>或<strong>「專業工作心境」</strong>選擇即可。 </p>
-
+                <p class="content-text mb-6">您的參與對這場講座的優化至關重要。在填寫題目時，請依照您目前的<strong>「實際學習狀態」</strong>或<strong>「專業工作心境」</strong>選擇即可。</p>
                 <div class="w-10 h-0.5 bg-[#8B0D0B] mb-6"></div>
-
-                <p class="content-text text-gray-500 font-light italic serif">在學術與成長的路上，我們都是夥伴。讓我們一起用科技轉換壓力，尋找回探索知識的樂趣。 </p>
-
+                <p class="content-text text-gray-500 font-light italic serif">在學術與成長的路上，我們都是夥伴。讓我們一起用科技轉化壓力，找回探索知識的愉悅。</p>
             </div>
-
 
             <!-- 連結更新 -->
-
-            <a href="https://forms.gle/QbdK4po3QDwANn2w5" target="_blank" class="btn-burberry px-12 md:px-14 py-4 rounded-none inline-block font-bold text-lg tracking-[0.2em] font-bold text-lg tracking-[0.2em] font-bold text-lg tracking-[0.2em] font-bold text-lg。
-
-                填寫研究表格
-
+            <a href="https://forms.gle/QbdK4po3QDwANn2w5" target="_blank" class="btn-burberry px-12 md:px-14 py-4 rounded-none inline-block font-bold text-lg tracking-[0.2em] shadow-md w-full md:w-auto">
+                填寫研究問卷
             </a>
-
-           
-
+            
             <p class="mt-8 text-[10px] text-gray-400 italic one-line uppercase tracking-[0.2em]">
-
-                資料隱私保密·大眾學術課程優化使用
-
+                資料匿名保密 · 僅供學術課程優化使用
             </p>
-
         </div>
-
     </section>
 
-
-    <!-- 頁尾（頁尾）-->
-
+    <!-- 頁腳 (Footer) -->
     <footer class="py-16 px-6 bg-black text-white relative overflow-hidden text-center md:text-left">
-
         <div class="absolute left-[-20px] top-[-20px] opacity-[0.03] serif italic text-[120px] pointer-events-none">Heritage</div>
 
-
         <div class="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
-
             <div class="mb-10 text-center">
-
-                <h3 class="serif text-xl md:text-3xl font-bold Tracking-[0.25em] mb-4 單行文字-[#E1D3BE]">RC AI 美學實驗室</h3>
-
+                <h3 class="serif text-xl md:text-3xl font-bold tracking-[0.25em] mb-4 one-line text-[#E1D3BE]">R.C. AI美學實驗室</h3>
                 <div class="flex items-center justify-center space-x-2 md:space-x-3">
-
                     <div class="h-[0.5px] w-4 md:w-6 bg-[#8B0D0B]"></div>
-
-                    <p class="text-white text-sm md:text-lg font-light track-[0.2em] md:tracking-[0.3em] one-line footer-slogan">科技為筆 美學為墨 發現職人心高度</p>
-
+                    <p class="text-white text-sm md:text-lg font-light tracking-[0.2em] md:tracking-[0.3em] one-line footer-slogan">科技為筆 美學為墨 發現職人心高度</p>
                     <div class="h-[0.5px] w-4 md:w-6 bg-[#8B0D0B]"></div>
-
                 </div>
-
             </div>
-
-           
-
-            <div class="w-full pt-10 border-t border-white border-opacity-5 text-gray-500 tracking-[0.2em] text-[9px] md:text-[10px] uppercase flex flex-col md:flex-rowify-md:flex-cent-center-center-ttm-center-ttm-center-ttm-center？
-
-                <p class="one-line mb-1 md:mb-0">Iris Lee · 學術界與時尚管理</p>
-
-                <p class="opacity-30 one-line uppercase">© 2024 倫敦 · 台北 · 保留所有權利</p>
-
+            
+            <div class="w-full pt-10 border-t border-white border-opacity-5 text-gray-500 tracking-[0.2em] text-[9px] md:text-[10px] uppercase flex flex-col md:flex-row justify-between items-center text-center">
+                <p class="one-line mb-1 md:mb-0">Iris Lee · Academia & Fashion Management</p>
+                <p class="opacity-30 one-line uppercase">© 2024 LONDON · TAIPEI · ALL RIGHTS RESERVED</p>
             </div>
-
         </div>
-
     </footer>
 
-
     <script>
-
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
             anchor.addEventListener('click', function (e) {
-
                 e.preventDefault();
-
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
-
-                    行為：'平滑'
-
+                    behavior: 'smooth'
                 });
-
             });
-
         });
-
     </script>
 
-
 </body>
-
 </html>
 
